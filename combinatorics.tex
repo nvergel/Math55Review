@@ -1,1 +1,85 @@
-\documentclass[11pt,letterpaper,boxed]{hmcpset}
+\documentclass[12pt]{article}
+
+\usepackage{fullpage}
+\pagestyle{empty}
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+\def\multiset#1#2{\ensuremath{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
+
+\begin{document}
+
+\begin{center} n chose k \end{center}
+
+\noindent Number of ways to chose k elements from a set of n elements when order does not matter and\\
+
+\begin{itemize}
+\item[i] there is no replacement:
+
+\[ \binom{n}{k} = \frac{n!}{k!(n-k)!} \]
+
+\item[ii] there is replacement (multichose):
+\[\multiset{n}{k} = \binom{n+k-1}{k}\]\\
+\end{itemize}
+
+\noindent Pascal's identity:
+\[\binom{n}{k} = \binom{n-1}{k}  + \binom{n-1}{k-1} \]
+
+\noindent Similarly:
+\[\multiset{n}{k} = \multiset{n-1}{k} + \multiset{n}{k-1}\]\\
+
+\noindent Hockey stick identity:
+\[\sum_{x=k}^n{\binom{x}{k}} = \binom{n+1}{k+1}\]\\
+
+\noindent Binomial identity:
+\[(x+y)^n = \sum{\binom{n}{k} x^k y^{n-k}} \]\\
+
+\noindent Other properties:
+\[\binom{n}{k} = \binom{n}{n-k} \]
+\[\sum{\binom{n}{k}} = 2^n\]
+
+\pagebreak
+
+\begin{center} Fibonacci Numbers \end{center}
+
+\noindent Recursive definition:
+
+\[F_0 = 0\]
+\[F_1 = 1\]
+\[F_n = F_{n-1} + F_{n-1} \]
+
+\noindent Binet's formula:
+
+\[F_n = \frac 15 (\phi^n - \bar{\phi}^n)\]
+\[\phi = \frac{1+\sqrt{5}}2 \text{ and } \bar{\phi} = \frac{1-\sqrt{5}}2\]
+
+\begin{center}  Note that $\phi$ and $\bar{\phi}$ are solutions to $x^2 = x + 1$ \end{center}
+
+\noindent First 13 numbers of Fibonacci series:
+\[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144\]\\
+
+\noindent All the ways ($f_n$) to tile a board of length $1 \times n$ with squares ($1 \times 1$) and dominoes ($1 \times 2$):
+\[ f_n = F_{n+1}\]
+
+\pagebreak
+
+\begin{center} Sets \end{center}
+
+\noindent The union of two sets, $A \cup B$, is the set of all elements contained in both A or B.\\
+
+\noindent The intersection of two sets, $A \cap B$ or simply $AB$, is the set of all elements in A and B.\\
+
+\noindent Two sets are disjoint if $A \cap B $ is the null set $\{\}$\\
+
+\noindent The size of a set $A$ is denoted by $|A|$\\
+
+\noindent Rule of sum: given disjoint sets $A_1, A_2, A_3, ..., A_n$, the size of there union is
+\[|A_1 \cup A_2 \cup A_3 \cup ... \cup A_n| = \sum{|A_i|} -  \sum \sum{|A_iA_j|} + \sum \sum \sum{|A_iA_jA_k|} - ... - (-1)^n |A_iA_jA_k...A_n|\]
+
+
+
+
+
+
+
+\end{document}
