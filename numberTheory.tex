@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+
+\usepackage{fullpage}
+\pagestyle{empty}
+
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{mathtools}
+
+\def\multiset#1#2{\ensuremath{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
+\def \z{\mathbb{Z}}
+\def \r{\mathbb{R}}
+\def \n{\noindent}
+\def \p{\pagebreak}
+
+\begin{document}
+
+\begin{center} Notes on notation \end{center}
+
+\n sets are denoted with \{ ... \}\\
+
+\n $\z$ set of all integers \{..., -2, -1, 0, 1, 2, ...\}\\
+
+\n $\r$ set of all natural numbers \{0, 1, 2, ...\}\\
+
+\n \textbackslash \{x\} means x is not in the set ie. \{1, 2, ...\} can be denoted as $\r$\textbackslash$\{0\}$\\
+
+\n $\in$ - element in set\\
+
+\n $\exists$ - there exists\\
+
+\n $\forall$ - for all
+
+\begin{center} Theorems \end{center}
+
+\n Addition, multiplication and subtraction are closed $\forall x;$ $x \in \z$.\\
+
+\n THM: The Division Algorithm\\
+\hangindent=1cm For $\frac ab$ where $a \in \z$ and $b \in \r$\textbackslash$\{0\}$, there is some quotient $q \in \r$ and remainder $0 \leq r < b$ such that,
+\[ a = bq + r\]
+$b$ is said to divide a if $r=0$. We denote this as $b|a$. If $b$ does not divide $a$ we say $b \nmid a$.\\
+
+\n THM: Integer Combination ``I.C Theorem"\\
+\hangindent=1cm If $d|a$ and $d|b$ then $d|(ax + by)$ for $x,y \in \z$.\\
+
+\n Greatest Common Divisor: We denote gcd(x,y) simply as (x,y)\\
+\hangindent=1cm Notes to self: if in doubt, (x,y) = 1 (ie. 1 is best guess when you are too lazy too compute gcd). Also, (x,0) = x.\\
+
+\n THM: Benzout's theorem:\\
+\hangindent=1cm For $a,b \in \z$, (a,b) is the smallest positive integer of the form $ax+by$ where $x,y \in \z$.\\
+
+
+
+\end{document}
