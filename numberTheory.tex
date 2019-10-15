@@ -14,7 +14,7 @@
 
 \begin{document}
 
-\begin{center} Notes on notation \end{center}
+\begin{center} Definitions \end{center}
 
 \no sets are denoted with \{ ... \}\\
 
@@ -28,7 +28,13 @@
 
 \no $\exists$ - there exists\\
 
-\no $\forall$ - for all
+\no $\forall$ - for all\\
+
+\no If $p$ is not prime then it is composite. 0 and 1 are neither prime nor composite\\
+
+\no 
+
+\no
 
 \begin{center} Recurrence Relations \end{center}
 
@@ -41,18 +47,35 @@ For example fibonacci numbers, $F_n = F_{n-1} + F_{n-2}$, have the characteristi
 \no Addition, multiplication and subtraction are closed $\forall x;$ $x \in \z$.\\
 
 \no THM: The Division Algorithm\\
-\hangindent=1cm For $\frac ab$ where $a \in \z$ and $b \in \n$\textbackslash$\{0\}$, there is some quotient $q \in \n$ and remainder $0 \leq r < b$ such that,
-\[ a = bq + r\]
-$b$ is said to divide a if $r=0$. We denote this as $b|a$. If $b$ does not divide $a$ we say $b \nmid a$.\\
+\hangindent=1cm For $\frac ab$ where $a \in \z$ and $b \in \n$\textbackslash$\{0\}$, there is some quotient $q \in \n$ and remainder $0 \leq r < b$ such that, \[ a = bq + r.\]
+ \begin{itemize}
+	\item[i] $b$ is said to divide a if $r=0$. We denote this as $b|a$. If $b$ does not divide $a$ we say $b \nmid a$.
+	\item[ii] When (a, b)=1, a and b are relatively prime\\
+\end{itemize}
 
 \no THM: Integer Combination ``I.C Theorem"\\
 \hangindent=1cm If $d|a$ and $d|b$ then $d|(ax + by)$ for $x,y \in \z$.\\
 
-\no Greatest Common Divisor: We denote gcd(x,y) simply as (x,y)\\
-\hangindent=1cm Notes to self: if in doubt, (x,y) = 1 (ie. 1 is best guess when you are too lazy too compute gcd). Also, (x,0) = x.\\
+\no Greatest Common Divisor:\\
+\hangindent=1cm We denote gcd(x,y) simply as (x,y). Note that (x,0) = x.\\
 
-\no THM: Benzout's theorem:\\
+\no THM: Bezout's Theorem:\\
 \hangindent=1cm For $a,b \in \z$, (a,b) is the smallest positive integer of the form $ax+by$ where $x,y \in \z$.\\
+
+\no THM: Euclid's Theorem:\\
+\hangindent=1cm For any integers, $a, b, x: (a, b) = (b, a - bx)$\\
+
+\no The Euclidean Algorithm:\\
+\hangindent=1cm (a, b)=(b, a mod b) where $b<a$\\
+
+\no Corollary to Bezout's Lmema:\\
+\hangindent=1cm If (a,b)=1 then there exist some $x,y \in \z$ such that $ax + by = 1$\\
+
+\no THM: "Important" Theorem:\\
+\hangindent=1cm  If d|ab and (d,a) = 1 then d|b\\
+
+\no THM: Fundamental Theorem of Arithmetic:\\
+\hangindent=1cm Every integer n has a unique factorization into primes. For example $1200 = 2^4 3^1 5^2$\\
 
 
 
