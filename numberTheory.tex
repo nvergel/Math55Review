@@ -11,6 +11,8 @@
 \def \n{\mathbb{N}}
 \def \no{\noindent}
 \def \p{\pagebreak}
+\def \et{\phi (n)}
+\def \m{\equiv_m}
 
 \begin{document}
 
@@ -82,13 +84,51 @@ For example fibonacci numbers, $F_n = F_{n-1} + F_{n-2}$, have the characteristi
  \begin{itemize}
 	\item[i] $a$ has $\prod (1+\alpha_i)$ divisors
 	\item[ii] $ (a, b) = \prod P_i^{\text{min}(\alpha_i,\beta_i)}$
-	\item[ii] $ [a,b] = \prod P_i^{\text{max}(\alpha_i,\beta_i)}$
+	\item[iii] $ [a,b] = \prod P_i^{\text{max}(\alpha_i,\beta_i)}$
 \end{itemize}
 
 
-\no 
-\hangindent=1cm
+\begin{center} Modular Arithmetic \end{center}
 
 
+\no Congruence: $a$ is congruent to $b$ mod $m$, denoted $a \m b$, if $m | a-b$.\\
+
+\no Congruence satisfies equivalence relations so it has the following properties:
+\begin{itemize}
+	\item[]Reflexive: $a \m b$
+	\item[]Symmetric: if $a \m b$ then $b \m a$ 
+	\item[]Transitive: if $a \m b$ and  $b \m c$ then $a \m c$ 
+\end{itemize}
+
+\no (Modular arithmetic) If $a \m b$ then,
+\begin{itemize}
+	\item[] $a + c \m b + c$
+	\item[] $a c \m b c$
+	\item[] $a^n \m b^n$ for $n \in \n$\\
+\end{itemize}
+
+\no Cancellation Theorem:\\
+\hangindent=1cm Let $(a,m) = 1$. If $a x \m a y$ then $x \m y$.\\
+
+\no Theorem:\\
+\hangindent=1cm Let $(a,m) = d$. If $a x \m a y$ then $x \equiv_\frac md y$.\\
+
+\no Inverse:\\
+\hangindent=1cm If $(a,m) = 1$ then $a$ has an inverse mod $m$ such that $ax \m 1$. Additionally $x$ is unique mod $m$ since $ax \m 1$ and $ay \m 1$ implies $x \m y$ by the cancellation theorem.\\
+
+\no Corollary:\\
+\hangindent=1cm Given a prime number $p$ and an integer $n$ such that $n < p$ then $n$ has an inverse mod $p$.\\
+
+\no Wilson's Theorem:\\
+\hangindent=1cm Given a prime number $p$ then $ (p-1)! \equiv_p p-1 \equiv_p -1$\\
+
+\no Fermat's Theorem:\\
+\hangindent=1cm Given a prime number $p$ then $ a^{p-1} \equiv_p 1$ or $ a^p \equiv_p a$\\
+
+\no Euler's Totient Function:\\
+\hangindent=1cm $\et$ is the number of integers in $\{1,2,...,n \}$ that are relatively prime to $n$.\\ $\et = n(1-1/P_1)(1-1/P_2)...(1-1/P_k)$ where $P_1,P_2,...,P_k$ are  prime factors of $n$.\\ Additionally, if $n$ is prime then $\et = n - 1$\\
+
+\no Euler's Theorem:\\
+\hangindent=1cm If $(a,m) = 1$ then $a^{\et} \m 1$
 
 \end{document}
